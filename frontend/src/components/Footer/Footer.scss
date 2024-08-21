@@ -1,0 +1,65 @@
+@import "../../responsive.scss";
+
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: #303030;
+
+    .footercontainer{
+        width: 100%;
+        padding: 12px 40px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        @include lg{
+            flex-direction: column;
+            gap: 15px;
+        }
+        .brandsection{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            img{
+                padding: 5px;
+                border: 1px solid white;
+                width: 100%;
+                max-height: 120px;
+                object-fit: cover;
+            }
+        }
+
+        .usefullinks{
+            display: flex;
+            gap: 15px;
+            @include sm{
+                flex-direction: column;
+            }
+            .usefullinkset{
+                width: 200px;
+                background-color: #ff8f2e;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                padding: 10px;
+                @include md{
+                    align-items: start;
+                }
+                @include sm{
+                    width: 100%;
+                    align-items: start;
+                }
+                h3{
+                    color: black;
+                }
+                li{
+                    list-style-type: none;
+                    color: rgb(56, 56, 56);
+                }
+            }
+        }
+    }
+}

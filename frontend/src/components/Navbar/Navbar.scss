@@ -1,0 +1,166 @@
+@import "../../responsive.scss";
+.navbar {
+  width: 100%;
+  height: 74px;
+  background-color: #303030;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  .navbarcontainer {
+    padding: 12px 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    @include sm {
+      padding: 12px 30px;
+    }
+    .branding {
+      width: auto;
+      img {
+        height: 50px;
+        width: auto;
+        padding: 5px;
+        border: 1px solid white;
+      }
+    }
+    .profileandsearchbar {
+      display: flex;
+      gap: 50px;
+      @include md {
+        display: none;
+      }
+      .searchbar {
+        height: 53px;
+        max-width: 330px;
+        background-color: #ff8f2e;
+        border-radius: 14px;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        input {
+          font-family: "Inter", sans-serif;
+          font-size: 20px;
+          line-height: 24.2px;
+          background-color: transparent;
+          height: 100%;
+          width: 100%;
+          border: none;
+          outline: none;
+          color: black;
+        }
+        .searchicon {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      .profile {
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          cursor: pointer;
+        }
+        img {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+        }
+      }
+      .loginbtn{
+        background-color: #ff8f2e;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 7px;
+        font-size: 14px;
+        font-weight: 600;
+        &:hover{
+          cursor: pointer;
+          background-color: #ff8f2eda;
+        }
+      }
+    }
+    .menuicon {
+      color: white;
+      display: none;
+      @include md {
+        display: block;
+      }
+    }
+  }
+
+  .menuopen {
+    display: none;
+    z-index: 2;
+    position: absolute;
+    top: 74px;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.87);
+    transition: all 0.3s ease;
+    @include md {
+      display: block;
+    }
+    &.open {
+      right: 0;
+    }
+    .menucontainer {
+      width: 100%;
+      padding: 20px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      .loginbtn {
+        background-color: #ff8f2e;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 7px;
+        font-size: 14px;
+        font-weight: 600;
+        &:hover {
+          cursor: pointer;
+          background-color: #ff8f2eda;
+        }
+      }
+      .searchbar {
+        height: 53px;
+        width: 100%;
+        max-width: 330px;
+        background-color: #ff8f2e;
+        border-radius: 14px;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        input {
+          font-family: "Inter", sans-serif;
+          font-size: 20px;
+          line-height: 24.2px;
+          background-color: transparent;
+          height: 100%;
+          width: 100%;
+          border: none;
+          outline: none;
+          color: black;
+        }
+      }
+      .profile {
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

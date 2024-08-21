@@ -1,0 +1,144 @@
+@import "../../responsive.scss";
+.loginpage {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/loginbg.png");
+  background-size: contain;
+  @include md{
+    height: 100%;
+  }
+  .container {
+    height: 100%;
+    .loginmaincontent {
+      padding: 100px 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      gap: 50px;
+      @include md{
+        flex-direction: column;
+      }
+      .welcometitle {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        @include md{
+          width: 100%;
+        }
+        .welcomefont {
+          width: 100%;
+          color: white;
+          font-family: "Inter", sans-serif;
+          font-size: 64px;
+          font-weight: 800;
+          line-height: 77.45px;
+          @include md{
+            font-size: 48px;
+            line-height: 58px;
+          }
+          @include sm{
+            font-size: 34px;
+            line-height: 48px;
+            text-align: center;
+          }
+        }
+      }
+      .loginform {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        @include md{
+          width: 100%;
+          justify-content: center;
+        }
+        .login {
+          width: 100%;
+          padding: 20px;
+          background-color: white;
+          border-radius: 7px;
+          display: flex;
+          flex-direction: column;
+          gap: 60px;
+          @include sm{
+            gap: 40px;
+          }
+          .loginheading {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .logintitle {
+              height: 30px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              h2 {
+                background-color: #9376e0;
+                padding: 5px 10px;
+                border-radius: 7px;
+                @include sm{
+                  font-size: 18px;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+          .mainloginsection {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            .logincontent {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+
+              h3 {
+                font-family: "Inter", sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 16.94px;
+              }
+              .inputfield {
+                background-color: #9376e0;
+                outline: none;
+                border: none;
+                border-radius: 7px;
+                height: 65px;
+                font-size: 30px;
+                padding: 0 10px;
+                @include sm{
+                  font-size: 17px;
+                  height: 40px;
+                }
+              }
+            }
+            .loginbutton {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              .loginbtn {
+                width: max-content;
+                padding: 10px 20px;
+                font-family: "Inter", sans-serif;
+                font-size: 32px;
+                font-weight: 700;
+                border: none;
+                border-radius: 7px;
+                background-color: #9376e0;
+                &:hover {
+                  cursor: pointer;
+                  background-color: #4a14df;
+                  color: white;
+                }
+                @include sm{
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

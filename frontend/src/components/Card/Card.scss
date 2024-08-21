@@ -1,0 +1,26 @@
+.card {
+  max-width: 260px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  .imagecontainer {
+    max-width: 260px;
+    height: auto;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+    }
+  }
+  .itemtitle {
+    width: 100%;
+    padding: 3px 15px;
+    border-radius: 5px;
+    background-color: #ff8f2e;
+    h3 {
+      text-align: center;
+    }
+  }
+ 
+}
