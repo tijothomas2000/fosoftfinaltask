@@ -2,23 +2,20 @@ import prisma from "../library/prisma.js";
 
 export const addProduct = async (req, res) => {
     const body = req.body;
-    // const tokenUserId = req.userId;
-
-    console.log(body);
     try {
         const newPost = await prisma.product.create({
             data: {
-                "name": body.name,
-                "desc": body.desc,
-                "food": body.food,
-                "instruction": body.instruction,
-                "category": body.category
+                name: body.name,
+                desc: body.desc,
+                food: body.food,
+                instruction: body.instruction,
+                categoryId: body.categoryId  
             }
         });
-        res.status(200).json({ message: "Succesfully created food item !" }, newPost);
+        res.status(200).json({ message: "Successfully created food item!", newPost });
     } catch (err) {
         console.log(err);
-        res.status(500).json({ message: "Could'nt add food item." });
+        res.status(500).json({ message: "Couldn't add food item." });
     }
 }
 
